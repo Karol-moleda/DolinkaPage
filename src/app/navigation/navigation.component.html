@@ -1,0 +1,26 @@
+<nav class="page">
+  <section class="page__main" [ngClass]="{'deactiveSection':flagMenuActive}">
+    <img src="./assets/dolinka.jpg" alt="">
+    <p class="main__description" (click)="activeMenu()">DOLINKA</p>
+  </section>
+  <section class="page__navigation" [ngClass]="{'activeSection':flagMenuActive}" >
+    <ul class="navigation__ul" >
+      <li class="navigation__history">
+        <a data-content="... i nie tylko">Historia</a>
+      </li>
+      <li class="navigation__management">
+        <a data-content="... Wasi przyjaciele" routerLink="/managment">Zarząd</a>
+      </li>
+      <li class="navigation__news">
+        <a data-content="... to co Was interesuje">Aktualności</a>
+      </li>
+      <li class="navigation__picture">
+        <a data-content="... znajdziesz siebie? ">Zdjęcia</a>
+      </li>
+      <li class="navigation__question">
+        <a data-content="... wolimy w 4 oczy :)">Pytania</a>
+      </li>
+    </ul>
+  </section>
+</nav>
+
