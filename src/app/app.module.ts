@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ManagmentPageComponent } from './managment-page/managment-page.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import { FormPageComponent } from './form-page/form-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     ManagmentPageComponent,
+    FormPageComponent,
   ],
   imports: [
     BrowserModule,

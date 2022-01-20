@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faHandPointRight} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faHandPointRight} from "@fortawesome/free-solid-svg-icons";
+import {NavigationService} from "../service/navigation.service";
 
 @Component({
   selector: 'app-managment-page',
@@ -17,9 +18,15 @@ export class ManagmentPageComponent implements OnInit {
      "Michał Mrówka"
   ]
 
-  constructor() { }
+  constructor(
+    private navigationService:NavigationService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  sendFlag() {
+    this.navigationService.flagInformation = true
   }
 
 }

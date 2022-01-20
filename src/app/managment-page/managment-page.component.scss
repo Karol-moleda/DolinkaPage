@@ -42,6 +42,14 @@ body {
   top:50%;
   transform:translate(-50%, -50%);
 
+  .content__menu {
+    img {
+      height: 50px;
+      display: flex;
+    }
+
+  }
+
   .content__president {
     display: flex;
     flex-direction: row;
