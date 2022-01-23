@@ -1,3 +1,25 @@
+@mixin font {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+@mixin border {
+  background: #FFFFFF;
+  border: 1px solid #9D9D9C;
+  box-sizing: border-box;
+  border-radius: 12px;
+  width: 100%;
+}
+
+@mixin placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  color: #19212B;
+}
+
 .form {
   .form__header {
     display: flex;
@@ -19,6 +41,80 @@
         img {
           height: 50px;
         }
+      }
+    }
+  }
+
+  .form__container {
+    display: flex;
+    flex-direction: row;
+
+    .container__form {
+      width: 50%;
+      margin-left: 15%;
+
+      .container__title {
+        @include font
+      }
+
+      .container__personals {
+        @include font;
+
+        p {
+          margin-bottom: 5px;
+        }
+
+        input {
+          @include border;
+          padding: 12px;
+
+          &::-webkit-input-placeholder {
+            @include placeholder
+          }
+        }
+      }
+
+      .container__questions {
+        @include font;
+
+        p {
+          margin-bottom: 5px;
+        }
+
+        input {
+          @include border;
+          padding: 12px;
+
+          &::-webkit-input-placeholder {
+            @include placeholder
+          }
+        }
+      }
+
+      .questions__message {
+        @include font;
+
+        p {
+          margin-bottom: 5px;
+        }
+
+        textarea {
+          @include border;
+          width:100%;
+          padding: 12px;
+
+          &::placeholder {
+            @include placeholder
+          }
+        }
+      }
+    }
+
+    .form__image {
+      width: 50%;
+
+      img {
+        height: 500px;
       }
     }
   }
