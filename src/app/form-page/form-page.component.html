@@ -1,10 +1,13 @@
 <section class="form">
+  <span class="form__menu" routerLink="/main"  (click)="sendFlag()">
+    <fa-icon  class="fa-3x" [icon]="iconsMenu"></fa-icon>
+  </span>
   <div class="form__header">
     <h1 class="header__text">Zadaj pytanie </h1>
     <div class="header__contact">
       <span class="contact__phone">
         <img src="./assets/phoneIcon.png" alt="telefon">
-        <p>666666666</p>
+        <p>508257011</p>
       </span>
       <span class="contact__email">
         <img src="./assets/mail.png" alt="e-mail">
@@ -37,6 +40,7 @@
         <p>Wiadomość</p>
         <textarea name="" id="" cols="30" rows="10" placeholder="Podaj treść wiadomośći "></textarea>
       </div>
+      <button class="questions__button">Wyślij</button>
     </form>
     <div class="form__image">
       <img src="./assets/question-ge48c41df2_1920.jpg" alt="">

@@ -7,6 +7,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ManagmentPageComponent } from './managment-page/managment-page.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { FormPageComponent } from './form-page/form-page.component';
+import { PhotosPageComponent } from './photos-page/photos-page.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormPageComponent } from './form-page/form-page.component';
     NavigationComponent,
     ManagmentPageComponent,
     FormPageComponent,
+    PhotosPageComponent,
   ],
   imports: [
     BrowserModule,
