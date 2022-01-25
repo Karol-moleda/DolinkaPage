@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {ManagmentPageComponent} from "./managment-page/managment-page.component";
 import {NavigationComponent} from "./navigation/navigation.component";
 import {FormPageComponent} from "./form-page/form-page.component";
+import {PhotosPageComponent} from "./photos-page/photos-page.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'formPage',
     component:FormPageComponent
+  },
+  {
+    path:'photosGallery',
+    component:PhotosPageComponent
   }
 ];
 

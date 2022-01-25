@@ -8,6 +8,8 @@ import { ManagmentPageComponent } from './managment-page/managment-page.componen
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { FormPageComponent } from './form-page/form-page.component';
 import { PhotosPageComponent } from './photos-page/photos-page.component';
+import {HttpClientModule} from "@angular/common/http";
+import {NgxGalleryModule} from "@kolkov/ngx-gallery";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { PhotosPageComponent } from './photos-page/photos-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    NgxGalleryModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
