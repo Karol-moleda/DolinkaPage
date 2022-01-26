@@ -9,6 +9,12 @@ import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from "@kolkov/n
 export class PhotosPageComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[]=[];
   galleryImages: NgxGalleryImage[]=[];
+  galleryPhotos = [
+    {src:"../assets/Dzien dziecka 2019/IMG_2857.jpg", name:"Dzień dziecka"},
+    {src:"../assets/Festyn  rodzinny 2019/IMG_4126.jpg", name:"Festyn rodzinny"},
+    {src:"../assets/Festyn 2019/wiosenny_festyn_w_dolince_-_17042019__4_20190418_2042672594.jpg", name:"Festyn "}
+  ];
+  flagPhoto:boolean=false
   constructor() { }
 
   ngOnInit() {
@@ -59,6 +65,10 @@ export class PhotosPageComponent implements OnInit {
         big: 'https://preview.ibb.co/kZGsLm/img8.jpg'
       },
     ];
+  }
+
+  changeViewPhotos() {
+    this.flagPhoto = true
   }
 
 }

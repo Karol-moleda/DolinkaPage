@@ -1,3 +1,28 @@
-<div class="gallery-wrapper">
-  <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
-</div>
+<mat-tab-group>
+  <mat-tab label="2019">
+    <div class="gallery" *ngIf="!flagPhoto">
+      <div class="gallery__column" *ngFor="let element of galleryPhotos">
+        <a  class="gallery__link" (click)="changeViewPhotos()">
+          <figure class="gallery__thumb">
+            <img [src]="element.src" alt="Portrait by Jessica Felicio" class="gallery__image">
+            <figcaption class="gallery__caption">{{element.name}}</figcaption>
+          </figure>
+        </a>
+
+      </div>
+    </div>
+    <div class="gallery-wrapper" *ngIf="flagPhoto">
+      <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+    </div>
+  </mat-tab>
+  <mat-tab label="2021">
+    <div class="gallery-wrapper">
+      <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+    </div>
+  </mat-tab>
+  <mat-tab label="2022">
+    <div class="gallery-wrapper">
+      <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -10,6 +10,8 @@ import { FormPageComponent } from './form-page/form-page.component';
 import { PhotosPageComponent } from './photos-page/photos-page.component';
 import {HttpClientModule} from "@angular/common/http";
 import {NgxGalleryModule} from "@kolkov/ngx-gallery";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {NgxGalleryModule} from "@kolkov/ngx-gallery";
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+    BrowserAnimationsModule,
+    MatTabsModule
 
   ],
   providers: [],
