@@ -1,28 +1,13 @@
-<mat-tab-group>
-  <mat-tab label="2019">
-    <div class="gallery" *ngIf="!flagPhoto">
-      <div class="gallery__column" *ngFor="let element of galleryPhotos">
-        <a  class="gallery__link" (click)="changeViewPhotos()">
-          <figure class="gallery__thumb">
-            <img [src]="element.src" alt="Portrait by Jessica Felicio" class="gallery__image">
-            <figcaption class="gallery__caption">{{element.name}}</figcaption>
-          </figure>
-        </a>
+<div class="masonry-demo">
 
-      </div>
+  <ngx-masonry [options]="masonryOptions" style="width: 90vw;" [ordered]="true" (itemsLoaded)="itemsLoaded()">
+    <div *ngFor="let image of masonryImages;index as idx"  ngxMasonryItem style="width: 30%;">
+      <img [src]="image[1]" width="100%">
     </div>
-    <div class="gallery-wrapper" *ngIf="flagPhoto">
-      <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
-    </div>
-  </mat-tab>
-  <mat-tab label="2021">
-    <div class="gallery-wrapper">
-      <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
-    </div>
-  </mat-tab>
-  <mat-tab label="2022">
-    <div class="gallery-wrapper">
-      <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
-    </div>
-  </mat-tab>
-</mat-tab-group>
+  </ngx-masonry>
+
+  <button *ngIf="limit < 100" (click)="showMoreImages()">Show More Images</button>
+  <button *ngIf="limit < 100" (click)="insertImage()">Insert Image</button>
+  <button *ngIf="masonryImages" (click)="removeImage()">Remove Image</button>
+  <h2 *ngIf="limit >= 100">No More Images</h2>
+</div>

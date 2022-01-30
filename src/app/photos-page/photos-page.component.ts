@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from "@kolkov/ngx-gallery";
+import {Component, OnInit, ViewChild} from '@angular/core';
+
+import {NgxMasonryComponent, NgxMasonryOptions} from "ngx-masonry";
 
 @Component({
   selector: 'app-photos-page',
@@ -7,68 +8,84 @@ import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from "@kolkov/n
   styleUrls: ['./photos-page.component.scss']
 })
 export class PhotosPageComponent implements OnInit {
-  galleryOptions: NgxGalleryOptions[]=[];
-  galleryImages: NgxGalleryImage[]=[];
-  galleryPhotos = [
-    {src:"../assets/Dzien dziecka 2019/IMG_2857.jpg", name:"Dzień dziecka"},
-    {src:"../assets/Festyn  rodzinny 2019/IMG_4126.jpg", name:"Festyn rodzinny"},
-    {src:"../assets/Festyn 2019/wiosenny_festyn_w_dolince_-_17042019__4_20190418_2042672594.jpg", name:"Festyn "}
-  ];
-  flagPhoto:boolean=false
-  constructor() { }
-
-  ngOnInit() {
-    this.galleryOptions = [
-      {
-        width: '600px',
-        height: '400px',
-        thumbnailsColumns: 4,
-        arrowPrevIcon: 'fa fa-chevron-left',
-        arrowNextIcon: 'fa fa-chevron-right',
-        imageAnimation: NgxGalleryAnimation.Slide
-      },
-      // max-width 800
-      {
-        breakpoint: 800,
-        width: '100%',
-        height: '600px',
-        imagePercent: 80,
-        thumbnailsPercent: 20,
-        thumbnailsMargin: 20,
-        thumbnailMargin: 20
-      },
-      // max-width 400
-      {
-        breakpoint: 400,
-        preview: false
-      }
-    ];
-
-    this.galleryImages = [
-      {
-        small: 'https://preview.ibb.co/jrsA6R/img12.jpg',
-        medium: 'https://preview.ibb.co/jrsA6R/img12.jpg',
-        big: 'https://preview.ibb.co/jrsA6R/img12.jpg'
-      },
-      {
-        small: 'https://preview.ibb.co/kPE1D6/clouds.jpg',
-        medium: 'https://preview.ibb.co/kPE1D6/clouds.jpg',
-        big: 'https://preview.ibb.co/kPE1D6/clouds.jpg'
-      },
-      {
-        small: 'https://preview.ibb.co/mwsA6R/img7.jpg',
-        medium: 'https://preview.ibb.co/mwsA6R/img7.jpg',
-        big: 'https://preview.ibb.co/mwsA6R/img7.jpg'
-      },{
-        small: 'https://preview.ibb.co/kZGsLm/img8.jpg',
-        medium: 'https://preview.ibb.co/kZGsLm/img8.jpg',
-        big: 'https://preview.ibb.co/kZGsLm/img8.jpg'
-      },
-    ];
+  public masonryOptions: NgxMasonryOptions = {
+    gutter: 20
   }
 
-  changeViewPhotos() {
-    this.flagPhoto = true
+
+  @ViewChild(NgxMasonryComponent) masonry:any= NgxMasonryComponent;
+
+  masonryImages:(boolean | string)[][] = [];
+  limit = 15;
+
+
+  dummyPictures = [
+    [false,"../assets/2019/IMG_2861.jpg"],
+    [false,"../assets/2019/IMG_2870.jpg"],
+    [false,"../assets/2019/IMG_2879.jpg"],
+    [false,"../assets/2019/IMG_2884.jpg"],
+    [false,"../assets/2019/IMG_2917.jpg"],
+    [false,"../assets/2019/IMG_2953.jpg"],
+    [false,"../assets/2019/IMG_2972.jpg"],
+    [false,"../assets/2019/IMG_2988.jpg"],
+    [false,"../assets/2019/IMG_3014.jpg"],
+    [false,"../assets/2019/IMG_3030.jpg"],
+    [false,"../assets/2019/IMG_3038.jpg"],
+    [false,"../assets/2019/IMG_3072.jpg"],
+    [false,"../assets/2019/IMG_3089.jpg"],
+    [false,"../assets/2019/IMG_3102.jpg"],
+    [false,"../assets/2019/IMG_3180.jpg"],
+    [false,"../assets/2019/IMG_3205.jpg"],
+    [false,"../assets/2019/IMG_4126.jpg"],
+    [false,"../assets/2019/IMG_4138.jpg"],
+    [false,"../assets/2019/IMG_4151.jpg"],
+    [false,"../assets/2019/IMG_4153.jpg"],
+    [false,"../assets/2019/IMG_4168.jpg"],
+    [false,"../assets/2019/IMG_4171.jpg"],
+    [false,"../assets/2019/IMG_4175.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+    [false,"../assets/2019/IMG_4196.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+    [false,"../assets/2019/IMG_4189.jpg"],
+  ];
+  constructor(
+  ) { }
+
+  ngOnInit() {
+    this.masonryImages = this.dummyPictures.slice(0, this.limit);
+  }
+
+  showMoreImages() {
+    this.limit += 15;
+    this.masonryImages = this.dummyPictures.slice(0, this.limit);
+  }
+
+  insertImage() {
+    this.masonryImages.splice(0, 0, this.dummyPictures[0]);
+    this.masonry.reloadItems();
+    this.masonry.layout();
+  }
+  prependImage() {
+    const image = this.dummyPictures[50];
+    image[0] = true;
+    this.masonryImages.push(image);
+  }
+
+  removeImage() {
+    this.masonryImages.pop();
+  }
+
+  itemsLoaded() {
+    console.log('itemsloaded');
   }
 
 }

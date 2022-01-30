@@ -12,6 +12,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {NgxGalleryModule} from "@kolkov/ngx-gallery";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from "@angular/material/tabs";
+import {NgxMasonryModule} from "ngx-masonry";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     HttpClientModule,
     NgxGalleryModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    NgxMasonryModule
 
   ],
   providers: [],
