@@ -13,6 +13,7 @@ import {NgxGalleryModule} from "@kolkov/ngx-gallery";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from "@angular/material/tabs";
 import {NgxMasonryModule} from "ngx-masonry";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {NgxMasonryModule} from "ngx-masonry";
     NgxGalleryModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    NgxMasonryModule
+    NgxMasonryModule,
+    MatButtonModule
 
   ],
   providers: [],
