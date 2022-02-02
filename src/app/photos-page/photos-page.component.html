@@ -1,6 +1,6 @@
 <section class="photoPage">
   <mat-tab-group class="photoPage__main">
-    <mat-tab label="Rok 2019" class="photoPage__2019">
+    <mat-tab label="Rok 2019" class="photoPage__2019" >
       <div class="photoPage__content">
         <ngx-masonry class="photoPage__content-item" [options]="masonryOptions" style="width: 100vw;" [ordered]="true" (itemsLoaded)="itemsLoaded()">
           <div *ngFor="let image of masonryImages;index as idx"  ngxMasonryItem style="width: 30%;">
@@ -14,8 +14,34 @@
         <h2 *ngIf="limit >= 100">No More Images</h2>
       </div>
     </mat-tab>
-    <mat-tab label="Second"> Content 2 </mat-tab>
-    <mat-tab  label="Third"> Content 3 </mat-tab>
+    <mat-tab label="Rok 2021" >
+      <div class="photoPage__content">
+        <ngx-masonry class="photoPage__content-item" [options]="masonryOptions" style="width: 100vw;" [ordered]="true" (itemsLoaded)="itemsLoaded()">
+          <div *ngFor="let image of masonryImages;index as idx"  ngxMasonryItem style="width: 30%;">
+            <img [src]="image[1]" width="100%">
+          </div>
+        </ngx-masonry>
+
+        <button mat-raised-button color="primary" class="photoPage__btn " *ngIf="limit < 100" (click)="showMoreImages()">Show More Images</button>
+        <button mat-raised-button color="primary"  class="photoPage__btn " *ngIf="limit < 100" (click)="insertImage()">Insert Image</button>
+        <button mat-raised-button color="primary"  class="photoPage__btn " *ngIf="masonryImages" (click)="removeImage()">Remove Image</button>
+        <h2 *ngIf="limit >= 100">No More Images</h2>
+      </div>
+    </mat-tab>
+    <mat-tab  label="Zdjęcia z dronu">
+      <div class="photoPage__content">
+        <ngx-masonry class="photoPage__content-item" [options]="masonryOptions" style="width: 100vw;" [ordered]="true" (itemsLoaded)="itemsLoaded()">
+          <div *ngFor="let image of masonryImages;index as idx"  ngxMasonryItem style="width: 30%;">
+            <img [src]="image[1]" width="100%">
+          </div>
+        </ngx-masonry>
+
+        <button mat-raised-button color="primary" class="photoPage__btn " *ngIf="limit < 100" (click)="showMoreImages()">Show More Images</button>
+        <button mat-raised-button color="primary"  class="photoPage__btn " *ngIf="limit < 100" (click)="insertImage()">Insert Image</button>
+        <button mat-raised-button color="primary"  class="photoPage__btn " *ngIf="masonryImages" (click)="removeImage()">Remove Image</button>
+        <h2 *ngIf="limit >= 100">No More Images</h2>
+      </div>
+    </mat-tab>
   </mat-tab-group>
 </section>
 

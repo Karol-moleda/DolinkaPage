@@ -1,7 +1,4 @@
 .photoPage {
-  &__2019{
-    height: 80px;
-  }
 
   &__content-item {
     left: 3%;
@@ -14,4 +11,16 @@
     margin-bottom: 2%;
   }
 
+}
+
+/* active tab */
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+  color:yellow;
+  background-color: lightgreen;
+  border-left:1px solid #BD9176;
+}
+
+/* ink bar */
+::ng-deep .mat-ink-bar {
+  background-color: var(--primary-color,#1F89CE) !important;
 }
