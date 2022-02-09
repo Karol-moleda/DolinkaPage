@@ -24,6 +24,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@kolkov/ngx-gallery": "^2.0.0",
+    "@material/image-list": "^13.0.0",
     "masonry-layout": "^4.2.2",
     "ngx-masonry": "^13.0.0",
     "rxjs": "~6.6.0",
