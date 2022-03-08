@@ -4,6 +4,7 @@ import {ManagmentPageComponent} from "./managment-page/managment-page.component"
 import {NavigationComponent} from "./navigation/navigation.component";
 import {FormPageComponent} from "./form-page/form-page.component";
 import {PhotosPageComponent} from "./photos-page/photos-page.component";
+import {NewsPageComponent} from "./news-page/news-page.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:'photosGallery',
     component:PhotosPageComponent
+  },
+  {
+    path:'newsPage',
+    component:NewsPageComponent
   }
 ];
 
