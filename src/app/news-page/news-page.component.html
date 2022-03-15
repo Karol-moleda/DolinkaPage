@@ -1,23 +1,21 @@
-<div class="snote">
+<div class="snote" *ngIf="!flagNews">
   <ul >
     <li *ngFor="let item of newsList">
-      <a href="#LINK 1">
+      <a>
         <h2>{{item.title}}</h2><hr />
         <p>{{item.date}}</p>
         <p>{{item.time}}</p>
-        <p></p>
+        <button class="btn btnAccept" (click)="openNews()">Dowiedz się więcej</button>
       </a>
     </li>
   </ul>
 </div>
 
-<section class="content-wrapper">
-  <div class="content__box">
-    <h1 class="content__title">Święto Ksiązki</h1>
-    <hr>
-    <p class="content__description">Troska o zasoby naturalne planety i wrażliwość ekologiczna stanowią serce naszej działalności.</p>
-  </div>
-  <div class="content__image">
-    <img src="./assets/2019/_MG_0344.jpg" alt="">
+<section class="content-wrapper" *ngIf="flagNews">
+  <div class='post-it' contenteditable>
+    <h1>Święto ksiązki </h1>
+    <ul>
+      <p>Zapraszamy Wszystkich na to wspaniałe święto !!! </p>
+    </ul>
   </div>
 </section>

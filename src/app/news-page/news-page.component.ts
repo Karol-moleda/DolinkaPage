@@ -16,5 +16,9 @@ export class NewsPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  flagNews:boolean=false
+  openNews() {
+    this.flagNews = true
+  }
 
 }

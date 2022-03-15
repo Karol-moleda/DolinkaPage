@@ -1,8 +1,8 @@
+//Style for list news
 
-
- .snote{
+.snote{
    max-width:100%;
-   background-color:#666;
+   background-color:#F4837D;
    height: 100%;
  }
 
@@ -95,5 +95,112 @@
   font-family:'Shadows Into Light Two',arial,sans-serif;
   font-size:140%;
   color:#000;
+}
+
+// Button style
+.btn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 0.6em;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 0.5em 1.2em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+  }
+}
+
+.btnAccept {
+  // background: $yellow;
+  border-color: red;
+  color: #fff;
+  background: {
+    image: linear-gradient(45deg,yellow 50%, transparent 50%);
+    position: 100%;
+    size: 400%;
+  }
+  transition: background 300ms ease-in-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+//section with more information about event
+
+.content-wrapper {
+  background-color: #F4837D;
+  height: 100%;
+
+  .post-it {
+    width:250px;
+    top: 100px;
+    height:auto;
+    position:relative;
+    background:#ffa;
+    overflow:hidden;
+    margin:30px auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:
+      inset 0 -40px 40px rgba(0,0,0,0.2),
+      inset 0 25px 10px rgba(0,0,0,0.2),
+      0 5px 6px 5px rgba(0,0,0,0.2);
+    font-family: 'Permanent Marker', cursive;
+    line-height:1.7em;
+    font-size:19px;
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+    color:#130d6b;
+  }
+
+  .post-it:before {
+    content:"";
+    display:block;
+    position:absolute;
+    width:20px;
+    height:25px;
+    background:#ffa;
+    box-shadow:
+      3px -2px 10px rgba(0,0,0,0.2),
+      inset 15px -15px 15px rgba(0,0,0,0.3);
+    left:0;
+    bottom:0;
+    z-index:2;
+    transform:skewX(25deg);
+  }
+
+  .post-it:after {
+    content:"";
+    display:block;
+    position:absolute;
+    width:75%;
+    height:20px;
+    border-top:3px solid #130d6b;
+    border-radius: 50% ;
+    bottom:0px;
+    left:10%;
+  }
+
+  h1 {
+    font-size:25px;
+    position:relative;
+  }
+
 }
 
