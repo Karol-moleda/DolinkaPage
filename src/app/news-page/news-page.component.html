@@ -1,4 +1,7 @@
 <div class="snote" *ngIf="!flagNews">
+  <div class="closeIcon" routerLink="/main">
+    <i class="fas fa-3x fa-bars"></i>
+  </div>
   <ul >
     <li *ngFor="let item of newsList">
       <a>
@@ -9,9 +12,13 @@
       </a>
     </li>
   </ul>
+  <div class="logoDolinka">
+    <img src="./assets/logo%20dolinki.jpg" alt="logo Dolinki">
+  </div>
 </div>
 
 <section class="content-wrapper" *ngIf="flagNews">
+  <div class="content__nav" (click)="closeNews()"><i class="fas fa-3x  fa-arrow-left"></i><img src="./assets/logo%20dolinki.jpg" alt="logo Dolinki"></div>
   <div class='post-it' contenteditable>
     <h1>Święto ksiązki </h1>
     <ul>
