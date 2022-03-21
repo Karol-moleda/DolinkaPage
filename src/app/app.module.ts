@@ -15,6 +15,7 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {NgxMasonryModule} from "ngx-masonry";
 import {MatButtonModule} from "@angular/material/button";
 import { NewsPageComponent } from './news-page/news-page.component';
+import { HistoryPageComponent } from './history-page/history-page.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NewsPageComponent } from './news-page/news-page.component';
     FormPageComponent,
     PhotosPageComponent,
     NewsPageComponent,
+    HistoryPageComponent,
   ],
   imports: [
     BrowserModule,

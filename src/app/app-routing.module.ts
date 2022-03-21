@@ -5,6 +5,7 @@ import {NavigationComponent} from "./navigation/navigation.component";
 import {FormPageComponent} from "./form-page/form-page.component";
 import {PhotosPageComponent} from "./photos-page/photos-page.component";
 import {NewsPageComponent} from "./news-page/news-page.component";
+import {HistoryPageComponent} from "./history-page/history-page.component";
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'newsPage',
     component:NewsPageComponent
+  },
+  {
+    path:'historyPage',
+    component:HistoryPageComponent
   }
 ];
 
