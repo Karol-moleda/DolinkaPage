@@ -5,17 +5,17 @@
   <div class="form__header">
     <h1 class="header__text">Zadaj pytanie </h1>
     <div class="header__contact">
-      <span class="contact__phone">
+      <span class="contact__phone" (mouseover)="this.flagPhone=true" (mouseleave)="this.flagPhone=false">
         <img src="./assets/phoneIcon.png" alt="telefon">
-        <p>508257011</p>
+        <p [ngClass]="{'active':this.flagPhone}">508257011</p>
       </span>
-      <span class="contact__email">
+      <span class="contact__email" (mouseover)="this.flagEmail=true" (mouseleave)="this.flagEmail=false">
         <img src="./assets/mail.png" alt="e-mail">
-        <p>karol.moleda90@gmail.com</p>
+        <p [ngClass]="{'active':this.flagEmail}">dolinkaosiedlemlodych@gmail.com</p>
       </span>
-      <span class="contact__facebook">
+      <span class="contact__facebook" (mouseover)="this.flagFacebook=true" (mouseleave)="this.flagFacebook=false">
         <img src="./assets/facebook.png" alt="facebook">
-        <p>Dolinka-nasze wspólne miejsce</p>
+        <p [ngClass]="{'active':this.flagFacebook}">Dolinka-nasze wspólne miejsce</p>
       </span>
     </div>
   </div>

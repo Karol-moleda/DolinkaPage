@@ -75,9 +75,12 @@ html{
         }
 
         p {
+          display: none;
           font-family: Luminari, fantasy;
           font-size: 18px;
         }
+
+        .active {display: flex}
       }
     }
   }

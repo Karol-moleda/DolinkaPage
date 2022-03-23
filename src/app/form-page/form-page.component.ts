@@ -9,6 +9,9 @@ import {NavigationService} from "../service/navigation.service";
 })
 export class FormPageComponent implements OnInit {
   iconsMenu = faBars;
+  flagPhone=false;
+  flagEmail=false;
+  flagFacebook=false
 
   constructor(private navigationService:NavigationService) { }
 
