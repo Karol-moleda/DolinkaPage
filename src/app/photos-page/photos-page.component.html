@@ -1,37 +1,10 @@
-<section class="photoPage">
-  <mat-tab-group class="photoPage__main">
-    <mat-tab label="Rok 2019" class="photoPage__2019" >
-      <div class="photoPage__content">
-        <ngx-masonry class="photoPage__content-item" [options]="masonryOptions" style="width: 100vw;" [ordered]="true" >
-          <div *ngFor="let image of photos2019"  class="masonryItem" ngxMasonryItem style="width: 30%;">
-            <img [src]="image" width="100%">
-          </div>
-        </ngx-masonry>
-
-        <button mat-raised-button color="primary" class="photoPage__btn "  >Show More Images</button>
-        <button mat-raised-button color="primary"  class="photoPage__btn " >Insert Image</button>
-        <button mat-raised-button color="primary"  class="photoPage__btn " >Remove Image</button>
-        <h2 >No More Images</h2>
-      </div>
-    </mat-tab>
-    <mat-tab label="Rok 2021" >
-      <div class="photoPage__content">
-        <ngx-masonry class="photoPage__content-item" [options]="masonryOptions" style="width: 100vw;" [ordered]="true" >
-          <div *ngFor="let image of photos2021"  ngxMasonryItem style="width: 30%;">
-            <img [src]="image" width="100%">
-          </div>
-        </ngx-masonry>
-
-        <button mat-raised-button color="primary" class="photoPage__btn "  >Show More Images</button>
-        <button mat-raised-button color="primary"  class="photoPage__btn "  >Insert Image</button>
-        <button mat-raised-button color="primary"  class="photoPage__btn "  >Remove Image</button>
-        <h2 >No More Images</h2>
-      </div>
-    </mat-tab>
-    <mat-tab  label="Zdjęcia z dronu">
-
-    </mat-tab>
-  </mat-tab-group>
-</section>
-
-
+<div class="photoPage__content">
+  <div class="closeIcon" routerLink="/main">
+    <i class="fas fa-3x fa-bars"></i>
+  </div>
+  <ngx-masonry  [options]="masonryOptions" class="photoPage__mansory"  [ordered]="true">
+    <div *ngFor="let image of photos2019" class="masonryItem" ngxMasonryItem style="width: 30%;">
+      <img [src]="image" width="100%">
+    </div>
+  </ngx-masonry>
+</div>

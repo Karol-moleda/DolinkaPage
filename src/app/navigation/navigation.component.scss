@@ -78,6 +78,10 @@ body {
       margin: 0;
       padding: 0;
 
+      @media screen and (max-width:800px) {
+        flex-direction: column;
+      }
+
       li {
         -webkit-flex-basis: 20%;
         -ms-flex-preferred-size: 20%;
@@ -165,26 +169,45 @@ body {
       .navigation__history {
         background-color: #29363B;
         width: 20%;
+
+        @media screen and (max-width:800px) {
+          width: 100%;
+        }
       }
 
       .navigation__management {
         background-color: #EA495F;
         width: 20%;
+        @media screen and (max-width:800px) {
+          width: 100%;
+        }
       }
 
       .navigation__news {
         background-color: #F4837D;
         width: 20%;
+
+        @media screen and (max-width:800px) {
+          width: 100%;
+        }
       }
 
       .navigation__picture {
         background-color: #FDCEA9;
         width: 20%;
+
+        @media screen and (max-width:800px) {
+          width: 100%;
+        }
       }
 
       .navigation__question {
         background-color: #99B998;
         width: 20%;
+
+        @media screen and (max-width:800px) {
+          width: 100%;
+        }
       }
     }
   }

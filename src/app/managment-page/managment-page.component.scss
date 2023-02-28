@@ -47,6 +47,10 @@ body {
       height: 50px;
       display: flex;
       margin-left: -40px;
+
+      @media screen and (max-width:800px) {
+        margin-left: 0;
+      }
     }
 
   }

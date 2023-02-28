@@ -33,7 +33,6 @@ html{
 .form {
   padding-top: 50px;
   background-color: #99B998;
-  height: 100%;
 
   .form__menu {
     position: absolute;
@@ -45,6 +44,9 @@ html{
     display: flex;
     flex-direction: column;
 
+    @media screen and (max-width:800px) {
+      margin-top: 100px;
+    }
 
     .header__text {
       margin-left: auto;
@@ -61,6 +63,11 @@ html{
       align-items: center;
       margin-top: 50px;
       margin-bottom: 50px;
+
+      @media screen and (max-width:800px) {
+        flex-direction: column;
+        gap: 40px;
+      }
 
       span {
         display: flex;
@@ -90,9 +97,20 @@ html{
     flex-direction: row;
     padding-bottom: 10px;
 
+    @media screen and (max-width:800px) {
+      flex-direction: column;
+    }
+
     .container__form {
       width: 50%;
       margin-left: 15%;
+      
+      @media screen and (max-width:800px) {
+        width: 90vw;
+        margin-left: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
 
       .container__title {
         @include font
@@ -162,8 +180,14 @@ html{
         line-height: 24px;
         letter-spacing: 5px;
         margin-top: 5px;
-        margin-left: 80%;
+        margin-left: 70%;
         width: 180px;
+
+        @media screen and (max-width:800px) {
+          margin-left: 0;
+          margin-bottom: 32px;
+          margin-top: 32px;
+        }
       }
     }
 
@@ -172,9 +196,21 @@ html{
       margin-top: 5%;
       margin-left: 5%;
 
+      @media screen and (max-width:800px) {
+        width: 90vw;
+        margin: 0 auto;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
       img {
         height: 500px;
         border-radius: 20px;
+
+        @media screen and (max-width:800px) {
+          height: 100%;
+          width: 100%;
+        }
       }
     }
   }

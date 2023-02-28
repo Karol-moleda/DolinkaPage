@@ -1,9 +1,24 @@
+.history {
+  background-color: #efeceb;
+  
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
 .history__title {
   div {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     padding: 20px;
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      gap: 20px;
+    }
 
     h1 {
       text-shadow: 1px 1px 0px #000;
@@ -15,6 +30,13 @@
 .history__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid green;
+    padding-bottom: 20px;
+  }
 
   .history__content-image {
     img {

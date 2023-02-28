@@ -6,6 +6,10 @@
    background-color:#F4837D;
    height: 100%;
 
+   @media screen and (max-width:800px) {
+    height: auto;
+   }
+
   .closeIcon {
     display: flex;
     justify-content: flex-end;
