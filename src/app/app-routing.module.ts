@@ -9,7 +9,7 @@ import {HistoryPageComponent} from "./history-page/history-page.component";
 
 const routes: Routes = [
   {
-    path:'main',
+    path:'',
     component:NavigationComponent
   },
   {

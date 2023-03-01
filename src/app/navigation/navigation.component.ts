@@ -12,7 +12,7 @@ export class NavigationComponent implements OnInit {
   constructor(private navigationService:NavigationService) { }
 
   ngOnInit(): void {
-    this.flagMenuActive = this.navigationService.flagInformation
+    // this.flagMenuActive = this.navigationService.flagInformation
   }
 
   activeMenu() {
